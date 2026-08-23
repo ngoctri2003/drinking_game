@@ -6,8 +6,8 @@
   --muted: rgba(255, 246, 235, 0.58);
   --line: rgba(228, 197, 122, 0.3);
   --ease: cubic-bezier(0.22, 0.9, 0.24, 1);
-  --card-w: min(78vw, 328px);
-  --card-h: min(52dvh, 450px);
+  --card-w: min(92vw, 440px);
+  --card-h: min(66dvh, 580px);
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -541,19 +541,19 @@ main { flex: 1; min-height: 0; display: flex; }
   width: 100%;
   text-align: center;
   font-family: "Be Vietnam Pro", "Segoe UI", sans-serif;
-  font-size: 22px;
+  font-size: 28px;
   font-weight: 600;
-  line-height: 1.5;
+  line-height: 1.45;
   color: #1a120c;
 }
-.card-text.is-md { font-size: 19px; }
-.card-text.is-sm { font-size: 16px; line-height: 1.55; }
+.card-text.is-md { font-size: 23px; }
+.card-text.is-sm { font-size: 19px; line-height: 1.5; }
 
 .controls {
   display: flex;
   justify-content: center;
   gap: 12px;
-  margin-top: 18px;
+  margin-top: 12px;
   width: min(420px, 100%);
   position: relative;
   z-index: 2;
@@ -573,17 +573,19 @@ main { flex: 1; min-height: 0; display: flex; }
 }
 
 @media (max-width: 760px) {
-  .card-text { font-size: 20px; }
-  .card-text.is-md { font-size: 17px; }
-  .card-text.is-sm { font-size: 15px; }
-  .topbar { margin: 10px 10px 0; padding: 8px 8px 8px 10px; }
+  :root {
+    --card-w: min(94vw, 420px);
+    --card-h: min(64dvh, 560px);
+  }
+  .card-text { font-size: 24px; }
+  .card-text.is-md { font-size: 20px; }
+  .card-text.is-sm { font-size: 17px; }
+  .topbar { margin: 8px 8px 0; padding: 8px 8px 8px 10px; }
   .meter { min-width: 64px; }
   .brand h1 { font-size: 13px; }
   .btn-restart { padding: 0 10px; font-size: 11px; }
   .intro-title { font-size: clamp(38px, 11vw, 56px); }
-  .controls { flex-direction: column; width: min(340px, 100%); }
-  .controls .btn { width: 100%; }
-  .controls .btn-gold { order: -1; }
+  .controls { width: min(420px, 94vw); }
 }
 
 @media (max-height: 760px) {
@@ -593,8 +595,8 @@ main { flex: 1; min-height: 0; display: flex; }
 }
 
 @media (max-height: 700px) {
-  :root { --card-h: min(52dvh, 400px); }
-  .card-text { font-size: 18px; }
+  :root { --card-h: min(60dvh, 460px); }
+  .card-text { font-size: 22px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
