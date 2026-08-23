@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Drinking Game Cards</title>
+  <meta name="theme-color" content="#070406" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="ambient" aria-hidden="true">
+    <div class="bg-base"></div>
+    <div class="bg-grid"></div>
+    <div class="bg-table"></div>
+    <div class="bg-ring"></div>
+    <div class="bg-beam"></div>
+    <div class="bg-sparkles" id="bg-sparkles"></div>
+    <div class="vignette"></div>
+  </div>
+
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c1.4 3.4 4.6 6 8 6-3.2 1.2-5.2 4.2-5.8 8H9.8C9.2 12.2 7.2 9.2 4 8c3.4 0 6.6-2.6 8-6zm-3 15.2c.8 1.6 2 2.6 3 3.3.2.1.4.1.6 0 1-.7 2.2-1.7 3-3.3H9z"/></svg>
+      </span>
+      <h1>Drinking Game</h1>
+    </div>
+    <div class="hud">
+      <div class="meter" aria-label="Tiến độ">
+        <span id="progress-label">0 / 100</span>
+        <div class="meter-track"><div id="progress-bar" class="meter-fill"></div></div>
+      </div>
+      <button id="btn-restart" class="btn-restart" type="button">Chơi lại</button>
+      <button id="btn-mute" class="icon-btn" type="button" aria-label="Tắt âm thanh" title="Âm thanh">
+        <svg id="icon-sound-on" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M4 10v4h3l5 4V6L7 10H4z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+          <path d="M16 9.5a4 4 0 010 5M18.2 7.2a7 7 0 010 9.6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+        <svg id="icon-sound-off" class="hidden" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M4 10v4h3l5 4V6L7 10H4z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+          <path d="M17 9l5 6M22 9l-5 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section id="screen-intro" class="screen is-active">
+      <div class="intro-deck" aria-hidden="true">
+        <div class="dummy-card c3"></div>
+        <div class="dummy-card c2"></div>
+        <div class="dummy-card c1">
+          <div class="back-ornament">
+            <div class="back-frame"></div>
+            <div class="back-medallion">
+              <span>DRINK</span>
+              <small id="intro-count">100 CARDS</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="intro-eyebrow" id="intro-eyebrow">100 thử thách</p>
+      <h2 class="intro-title">Lật bài.<br /><em>Uống hay làm.</em></h2>
+      <button id="btn-start" class="btn btn-gold" type="button">Bắt đầu chơi</button>
+    </section>
+
+    <section id="screen-game" class="screen">
+      <div class="table">
+        <div class="felt" aria-hidden="true"></div>
+        <div class="spotlight" aria-hidden="true"></div>
+        <div id="card-scene" class="card-scene">
+          <button id="card" class="card" type="button" aria-label="Lật lá bài">
+            <div class="card-face card-back">
+              <div class="back-ornament">
+                <div class="back-frame"></div>
+                <div class="corner tl">♠</div>
+                <div class="corner tr">♥</div>
+                <div class="corner bl">♦</div>
+                <div class="corner br">♣</div>
+                <div class="back-medallion">
+                  <svg class="glass" viewBox="0 0 48 48" aria-hidden="true">
+                    <path d="M12 6h24l-3.2 16.4A10 10 0 0 1 24 32a10 10 0 0 1-8.8-9.6L12 6z" fill="none" stroke="currentColor" stroke-width="1.8"/>
+                    <path d="M24 32v8M16 42h16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                    <path d="M14.4 14h19.2" stroke="currentColor" stroke-width="1.4" opacity=".55"/>
+                  </svg>
+                  <span>DRINK</span>
+                </div>
+              </div>
+            </div>
+            <div class="card-face card-front">
+              <div class="front-inner">
+                <i class="flourish fl-tl"></i>
+                <i class="flourish fl-tr"></i>
+                <i class="flourish fl-bl"></i>
+                <i class="flourish fl-br"></i>
+                <p id="card-text" class="card-text"></p>
+              </div>
+            </div>
+          </button>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button id="btn-shuffle" class="btn btn-ghost" type="button">Xáo bài</button>
+        <button id="btn-next" class="btn btn-gold" type="button">Lật bài</button>
+      </div>
+    </section>
+
+    <section id="screen-end" class="screen">
+      <div class="end-seal" aria-hidden="true">♣</div>
+      <h2 class="intro-title">Hết bài rồi.</h2>
+      <p class="intro-copy">Đã lật hết 100 lá.</p>
+      <button id="btn-replay" class="btn btn-gold" type="button">Chơi lại từ đầu</button>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
