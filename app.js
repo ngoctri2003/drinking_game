@@ -247,6 +247,7 @@ function dealCard() {
 }
 
 function startGame(reset = false) {
+  enterFullscreen();
   if (reset) {
     state.used = new Set();
     saveUsed();
@@ -330,6 +331,32 @@ function toggleMute() {
   els.mute.setAttribute("aria-label", state.muted ? "Bật âm thanh" : "Tắt âm thanh");
 }
 
+function enterFullscreen() {
+  const node = document.documentElement;
+  const request = node.requestFullscreen || node.webkitRequestFullscreen;
+  if (!request || document.fullscreenElement) return;
+  Promise.resolve(request.call(node)).catch(() => {});
+}
+
+function lockToThisPage() {
+  const stay = { stay: true };
+  history.replaceState(stay, "");
+  history.pushState(stay, "");
+  window.addEventListener("popstate", () => {
+    history.pushState(stay, "");
+  });
+  window.addEventListener("beforeunload", (event) => {
+    event.preventDefault();
+    event.returnValue = "";
+  });
+  document.addEventListener("touchstart", (event) => {
+    if (event.target.closest("button")) return;
+    const x = event.touches[0]?.clientX ?? 0;
+    if (x <= 16 || x >= window.innerWidth - 16) event.preventDefault();
+  }, { passive: false });
+  document.addEventListener("pointerdown", enterFullscreen, { once: true });
+}
+
 els.start.addEventListener("click", () => startGame(false));
 els.replay.addEventListener("click", () => startGame(true));
 els.restart.addEventListener("click", () => startGame(true));
@@ -368,8 +395,33 @@ function spawnSparkles() {
 
 spawnSparkles();
 refreshIntro();
+lockToThisPage();
+
+document.addEventListener("dblclick", (event) => {
+  event.preventDefault();
+});
+["gesturestart", "gesturechange", "gestureend"].forEach((type) => {
+  document.addEventListener(type, (event) => event.preventDefault());
+});
+document.addEventListener("touchmove", (event) => {
+  if (event.touches.length > 1) event.preventDefault();
+}, { passive: false });
+let lastTouchEnd = 0;
+document.addEventListener("touchend", (event) => {
+  const now = Date.now();
+  if (now - lastTouchEnd <= 350) {
+    event.preventDefault();
+    const button = event.target.closest("button");
+    if (button) button.click();
+  }
+  lastTouchEnd = now;
+}, { passive: false });
 
 document.addEventListener("keydown", (event) => {
+  if ((event.altKey && (event.key === "ArrowLeft" || event.key === "ArrowRight")) || event.key === "BrowserBack" || event.key === "BrowserForward") {
+    event.preventDefault();
+    return;
+  }
   if (event.target instanceof HTMLButtonElement && event.key === " ") return;
   if (!els.game.classList.contains("is-active")) {
     if (event.key === "Enter" || event.key === " ") {
