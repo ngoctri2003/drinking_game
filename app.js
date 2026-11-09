@@ -1,5 +1,4 @@
 const CARDS = [
-  "Ai cười hở mồm thì uống",
   "Cả nhóm chọn ra 2 người vinh dự được bạn ngửi nách",
   "Ai từng Huệ thì uống nhé",
   "Ảnh đại diện Facebook ai nhiều Ha...Ha... nhất thì uống đi, chờ gì nữa",
@@ -9,21 +8,21 @@ const CARDS = [
   "Ai mặc áo trắng hoặc đen thì uống",
   "Người ít tuổi nhất uống với người lớn tuổi nhất",
   "Chưa có người yêu uống 1 ly, Có người yêu uống 2 ly, Có gia đình uống 3 ly",
-  "Nhắn với bố/ mẹ \"Con/ bạn gái/ vợ con có bầu rồi\"- Hoặc uống 2 ly",
+  'Nhắn với bố/ mẹ "Con/ bạn gái/ vợ con có bầu rồi"- Hoặc uống 2 ly',
   "2 người bên cạnh người bốc lá bài này phải uống",
   "Cả bàn không dùng tay uống 1 ly, Ai không làm được uống thêm 1 ly",
   "Ai đã từng bị cắm sừng uống",
   "Giữ lại lá bài này và có quyền chỉ định 1 người uống thay mình 1 lần",
-  "Gọi điện cho người yêu cũ \"Anh/ Em khoẻ không\"- Không có NYC thì uống",
+  'Gọi điện cho người yêu cũ "Anh/ Em khoẻ không"- Không có NYC thì uống',
   "Show số dư tài khoản hoặc uống",
   "Đoán màu quần lót người bên cạnh- đoán sai thì bạn uống, đoán đúng thì người đó uống",
-  "Không ai được nói từ \"Uống\"/\"Nốc\" từ giờ tới cuối buổi. Ai nói thì uống",
-  "Chơi nối từ, người cuối cùng \"bí\" thì uống",
+  'Không ai được nói từ "Uống"/"Nốc" từ giờ tới cuối buổi. Ai nói thì uống',
+  'Chơi nối từ, người cuối cùng "bí" thì uống',
   "Nghĩ ra một chủ đề để mọi người cùng trả lời (ví dụ: các nước ĐNA). Ai không nói được uống.",
   "Chọn 1 người đối thủ. Trong vòng 30s ai kể tên nhiều bộ phận trên cơ thể bắt đầu bằng chữ M thì thắng. Ai thua thì uống",
   "Kể một chuyện cười. Ai cười thì uống 1 ly. Nếu không ai cười thì bạn phải uống 2 ly.",
   "Không gọi tên nhau cho đến khi hết cuộc chơi. Ai phạm luật uống.",
-  "Trong vòng 3s, mọi người chỉ vào người mà bạn nghĩ \"giỏi chuyện ấy nhất\". Ai được nhiều vote nhất sẽ phải uống.",
+  'Trong vòng 3s, mọi người chỉ vào người mà bạn nghĩ "giỏi chuyện ấy nhất". Ai được nhiều vote nhất sẽ phải uống.',
   "Nói 2 điều bạn thích và 3 điều bạn không thích về người ngồi bên trái bạn- Hoặc ăn 1 thìa cà phê/ 1 thìa đầy muối",
   "Dùng 3 từ diễn tả lần đầu tiên của bạn (Mọi người quyết đinh lần đầu đó là gì)",
   "Chọn 1 người cùng chơi không chớp mắt trong 30s, ai thua uống",
@@ -46,13 +45,12 @@ const CARDS = [
   "Tiết lộ 3 điều bạn thấy quyến rũ nhất của người mà cả bàn chọn",
   "Like một tấm hình cũ (trên 1 tháng) của NYC hoặc NYC cũ người yêu =))))",
   "Ai FA lâu nhất uống",
-  "Ai CV 1 dòng uống",
   "Bao nhiêu tình cũ bấy nhiêu ly sầu",
   "Bạn đã bao giờ tè ra hồ bơi Hoặc lap dance một người mà cả bàn chọn",
   "Kể về lần nói dối mà bạn ân hận nhất Hoặc nhắn tin Chúc Mừng Sinh Nhật NYC hoặc NYC của người yêu",
   "Trong bàn này bạn muốn nhìn ai khoả thân nhất",
   "Trong bàn này bạn muốn nhìn ai khoả thân nhất",
-  "Chụp một tấm hình Kawaii chu môi và post lên FB caption \"nh0k l0k ch0k hay kh0x vi anh/ em\"",
+  'Chụp một tấm hình Kawaii chu môi và post lên FB caption "nh0k l0k ch0k hay kh0x vi anh/ em"',
   "Bắt chước một đặc điểm của một ai đó trong bàn này cho đến khi người chơi khác có thể đoán bạn là ai",
   "Cới cúc áo/áo cho người đối diện bằng miệng",
   "Đổi quần áo với một người khác giới HOẶC Kể về điều bạn muốn chồng/vợ/ny/nyc của bạn thay đổi",
@@ -79,7 +77,7 @@ const CARDS = [
   "Vuốt má người bên cạnh bạn",
   "Thả Ha...Ha... avatar FB của NYC",
   "Gọi cho người bạn nhắn tin gần đây nhất, không được nói gì và hát cho người đó nghe trong vòng 30 giây",
-  "Ai đang dùng điện thoại thực hiện squat 5 cái và hô \"Tôi dại dột\"",
+  'Ai đang dùng điện thoại thực hiện squat 5 cái và hô "Tôi dại dột"',
   "Cả bàn chọn một người cho bạn và 2 người phải nhìn nhau đắm đuối trong 30s",
   "Thì thầm vào tai người bên cạnh điều mà bạn thích nhất ở họ",
   "NYC có ấn tượng sâu sắc nhất HOẶC Tất cả chuyền 1 vật bằng môi đến khi có 1 người rớt thì uống",
@@ -99,6 +97,27 @@ const CARDS = [
   "Tất cả mọi người quay vòi voi 10 vòng, sau đấy đổ nước ra ly, ai làm tràn nước thì uống",
   "Tất cả mọi người ngậm nước vào mồm rồi nhìn nhau, ai phun nước ra trước thì uống",
   "Cả bạn chọn 1 đối thủ cho bạn, 2 người sẽ bị dán sticker lên mặt và nhiệm vụ là phải thổi bay sticker trên mặt đối phương. Ai còn ít sticker trên mặt hơn phải uống",
+  "Tất cả đều uống 2 ly, trừ người bốc lá này",
+  "Tất cả cùng uống 1 ly",
+  "Mời người bên phải bạn một ly",
+  "Sấp ngửa: cả bàn cùng úp hoặc ngửa bàn tay, bên nào nhiều người hơn thì uống",
+  "Lắc mông 30 giây - Hoặc uống 1 ly",
+  "Ai không đeo kính thì nốc",
+  "Để mọi người cù trong 1 phút - Hoặc uống 1 ly",
+  "Người cao nhất và người thấp nhất cùng uống",
+  "Ấn tượng đầu tiên của bạn về người yêu hiện tại là gì?",
+  "Nếu bạn là nam thì nốc",
+  "Nếu bạn là nữ thì nốc",
+  "Đã có bằng lái xe thì nốc",
+  "Nốc nếu bạn xài iPhone",
+  "Kể lý do chia tay gần đây nhất",
+  "Oẳn tù xì, ai thắng thì nốc",
+  "Nốc nếu bạn đã từng bị CSGT bắt",
+  "Tát người đối diện một cái - Hoặc nốc",
+  "Nốc nếu bạn quê ở Hà Nam =))",
+  "Nốc nếu hôm nay bạn chưa tắm",
+  "Nốc nếu điện thoại bạn đang dưới 20% pin",
+  "Người bốc lá này hô “Đứng!” bất cứ lúc nào trong 30 giây tới. Ai đứng dậy cuối cùng thì uống",
 ];
 
 const DECK = CARDS.map((text, id) => ({ id, text }));
@@ -170,7 +189,9 @@ function textSize(text) {
 }
 
 function showScreen(name) {
-  [els.intro, els.game, els.end].forEach((screen) => screen.classList.remove("is-active"));
+  [els.intro, els.game, els.end].forEach((screen) =>
+    screen.classList.remove("is-active"),
+  );
   els[name].classList.add("is-active");
 }
 
@@ -195,7 +216,9 @@ function refreshIntro() {
       : "100 thử thách";
   }
   els.start.textContent = flippedCount
-    ? (left ? "Tiếp tục chơi" : "Xem kết quả")
+    ? left
+      ? "Tiếp tục chơi"
+      : "Xem kết quả"
     : "Bắt đầu chơi";
 }
 
@@ -314,7 +337,10 @@ function shuffleRemaining() {
     updateHud();
     return;
   }
-  const rest = state.current && !state.flipped ? [...state.deck, state.current] : [...state.deck];
+  const rest =
+    state.current && !state.flipped
+      ? [...state.deck, state.current]
+      : [...state.deck];
   if (!rest.length) return;
   state.deck = shuffle(rest);
   if (state.flipped) {
@@ -328,7 +354,10 @@ function toggleMute() {
   state.muted = !state.muted;
   els.soundOn.classList.toggle("hidden", state.muted);
   els.soundOff.classList.toggle("hidden", !state.muted);
-  els.mute.setAttribute("aria-label", state.muted ? "Bật âm thanh" : "Tắt âm thanh");
+  els.mute.setAttribute(
+    "aria-label",
+    state.muted ? "Bật âm thanh" : "Tắt âm thanh",
+  );
 }
 
 function enterFullscreen() {
@@ -349,11 +378,15 @@ function lockToThisPage() {
     event.preventDefault();
     event.returnValue = "";
   });
-  document.addEventListener("touchstart", (event) => {
-    if (event.target.closest("button")) return;
-    const x = event.touches[0]?.clientX ?? 0;
-    if (x <= 16 || x >= window.innerWidth - 16) event.preventDefault();
-  }, { passive: false });
+  document.addEventListener(
+    "touchstart",
+    (event) => {
+      if (event.target.closest("button")) return;
+      const x = event.touches[0]?.clientX ?? 0;
+      if (x <= 16 || x >= window.innerWidth - 16) event.preventDefault();
+    },
+    { passive: false },
+  );
   document.addEventListener("pointerdown", enterFullscreen, { once: true });
 }
 
@@ -369,15 +402,23 @@ els.card.addEventListener("click", () => {
 });
 
 let touchX = null;
-els.card.addEventListener("touchstart", (event) => {
-  touchX = event.changedTouches[0].clientX;
-}, { passive: true });
-els.card.addEventListener("touchend", (event) => {
-  if (touchX == null) return;
-  const dx = event.changedTouches[0].clientX - touchX;
-  touchX = null;
-  if (dx < -60 && state.flipped) nextCard();
-}, { passive: true });
+els.card.addEventListener(
+  "touchstart",
+  (event) => {
+    touchX = event.changedTouches[0].clientX;
+  },
+  { passive: true },
+);
+els.card.addEventListener(
+  "touchend",
+  (event) => {
+    if (touchX == null) return;
+    const dx = event.changedTouches[0].clientX - touchX;
+    touchX = null;
+    if (dx < -60 && state.flipped) nextCard();
+  },
+  { passive: true },
+);
 
 function spawnSparkles() {
   const host = document.getElementById("bg-sparkles");
@@ -403,22 +444,35 @@ document.addEventListener("dblclick", (event) => {
 ["gesturestart", "gesturechange", "gestureend"].forEach((type) => {
   document.addEventListener(type, (event) => event.preventDefault());
 });
-document.addEventListener("touchmove", (event) => {
-  if (event.touches.length > 1) event.preventDefault();
-}, { passive: false });
+document.addEventListener(
+  "touchmove",
+  (event) => {
+    if (event.touches.length > 1) event.preventDefault();
+  },
+  { passive: false },
+);
 let lastTouchEnd = 0;
-document.addEventListener("touchend", (event) => {
-  const now = Date.now();
-  if (now - lastTouchEnd <= 350) {
-    event.preventDefault();
-    const button = event.target.closest("button");
-    if (button) button.click();
-  }
-  lastTouchEnd = now;
-}, { passive: false });
+document.addEventListener(
+  "touchend",
+  (event) => {
+    const now = Date.now();
+    if (now - lastTouchEnd <= 350) {
+      event.preventDefault();
+      const button = event.target.closest("button");
+      if (button) button.click();
+    }
+    lastTouchEnd = now;
+  },
+  { passive: false },
+);
 
 document.addEventListener("keydown", (event) => {
-  if ((event.altKey && (event.key === "ArrowLeft" || event.key === "ArrowRight")) || event.key === "BrowserBack" || event.key === "BrowserForward") {
+  if (
+    (event.altKey &&
+      (event.key === "ArrowLeft" || event.key === "ArrowRight")) ||
+    event.key === "BrowserBack" ||
+    event.key === "BrowserForward"
+  ) {
     event.preventDefault();
     return;
   }
