@@ -1,6 +1,6 @@
 const CARDS = [
   "Cả nhóm chọn ra 2 người vinh dự được bạn ngửi nách",
-  "Ai từng Huệ thì uống nhé",
+  "Ai từng Huệ thì uống nhé =))",
   "Ảnh đại diện Facebook ai nhiều Ha...Ha... nhất thì uống đi, chờ gì nữa",
   "Hôn má người bên trái hoặc bên phải bạn (cả bàn chỉ định)",
   "Gọi cho người yêu cũ xin quay lại - Hoặc uống",
